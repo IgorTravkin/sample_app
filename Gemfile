@@ -35,7 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+##group :development, :test do
+group :development, :test, :production do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
 
@@ -49,7 +50,8 @@ group :development, :test do
   gem 'spring'
 end
 
-group :test do
+##group :test do
+group :test, :production do
   gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
@@ -61,3 +63,5 @@ end
 
 gem 'therubyracer'
 gem 'pg'
+
+gem 'puma',           '2.11.1'
